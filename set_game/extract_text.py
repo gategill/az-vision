@@ -1,16 +1,16 @@
 import os
+from pprint import pprint
+
+from dotenv import load_dotenv
 from azure.ai.vision.imageanalysis import ImageAnalysisClient
 from azure.ai.vision.imageanalysis.models import VisualFeatures
 from azure.core.credentials import AzureKeyCredential
 
-# Set the values of your computer vision endpoint and computer vision key
-# as environment variables:
-from dotenv import load_dotenv
-from pprint import pprint
-
 load_dotenv()  # take environment variables from .env.
 
 
+# Set the values of your computer vision endpoint and computer vision key
+# as environment variables:
 try:
     key = os.getenv("VISION_KEY", None)
     endpoint = os.getenv("VISION_ENDPOINT", None)

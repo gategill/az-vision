@@ -1,5 +1,6 @@
-from PIL import Image, ImageDraw
 from random import randint
+
+from PIL import Image, ImageDraw
 
 # Define the properties of the Set card
 card_width, card_height = 200, 300
